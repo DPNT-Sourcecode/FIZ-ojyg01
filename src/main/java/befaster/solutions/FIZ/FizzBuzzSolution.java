@@ -18,17 +18,14 @@ public class FizzBuzzSolution {
             nrTrueFlags++;
         }
 
-        if (number > 10) {
-            Integer tempNumber = number;
-            Integer lastDigitOfTheNumber = number % 10;
-            while (tempNumber % 10 == lastDigitOfTheNumber) {
-                tempNumber = tempNumber / 10;
-                if (tempNumber > 0 == false) {
-                    deluxeFlag = true;
-                    nrTrueFlags++;
-                    break;
-                }
-            }
+        if (number % 3 == 0 && number.toString().contains("3")) {
+            deluxeFlag = true;
+            nrTrueFlags++;
+        }
+
+        if (number % 5 == 0 && number.toString().contains("5")) {
+            deluxeFlag = true;
+            nrTrueFlags++;
         }
 
         if (fizzFlag.equals(true)) {
@@ -69,4 +66,5 @@ public class FizzBuzzSolution {
     }
 
 }
+
 
