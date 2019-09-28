@@ -35,7 +35,7 @@ public class FizzBuzzSolution {
             stringToBeReturned = "fizz";
         }
         if (buzzFlag.equals(true)) {
-            if (nrTrueFlags > 1) {
+            if (nrTrueFlags > 1 && fizzFlag.equals(true)) {
                 stringToBeReturned = stringToBeReturned + " buzz";
             } else {
                 stringToBeReturned = "buzz";
@@ -55,5 +55,3 @@ public class FizzBuzzSolution {
     }
 
 }
-
-
