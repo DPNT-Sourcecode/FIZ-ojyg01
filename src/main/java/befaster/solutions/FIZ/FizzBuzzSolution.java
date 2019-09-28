@@ -43,9 +43,17 @@ public class FizzBuzzSolution {
         }
         if (deluxeFlag.equals(true)) {
             if (nrTrueFlags > 1) {
-                stringToBeReturned = stringToBeReturned + " deluxe";
+                if (checkIfIsEven(number).equals(Boolean.TRUE)) {
+                    stringToBeReturned = stringToBeReturned + " deluxe";
+                } else {
+                    stringToBeReturned = stringToBeReturned + " fake deluxe";
+                }
             } else {
-                stringToBeReturned = "deluxe";
+                if (checkIfIsEven(number).equals(Boolean.TRUE)) {
+                    stringToBeReturned = "deluxe";
+                } else {
+                    stringToBeReturned = "fake deluxe";
+                }
             }
         }
 
@@ -54,4 +62,11 @@ public class FizzBuzzSolution {
         return number.toString();
     }
 
+    private Boolean checkIfIsEven (Integer n) {
+        if (n % 2 == 0)
+            return Boolean.TRUE;
+        return Boolean.FALSE;
+    }
+
 }
+
